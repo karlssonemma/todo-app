@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
+//import components
+import Header from './components/Header/Header'
+import Input from './components/Input/Input'
+import ItemList from './components/ItemList/ItemList'
+
 function App() {
+
+  let [input, setInput] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Header />
+      <Input setInput={setInput} />
+      <ItemList input={input} />
+    </main>
   );
 }
 

@@ -2,18 +2,25 @@ import React, { useEffect } from 'react'
 import './ItemList.css'
 
 //import components
+import Item from '../Item/Item'
 
-
-const ItemList = ({input}) => {
-
-    let displayItem = useEffect( () => {
-        return(input.map( item => console.log(item)))
-    }, [input])
-    
+const ItemList = (props) => {
 
     return(
-        <ul className='item__container'>
-            {displayItem}
+        <ul className='items__container'>
+            {
+                props.todos.map( (todo) => 
+                <Item 
+                    todos={props.todos} 
+                    setTodos={props.setTodos} 
+
+                    description={todo.description}
+                    item={todo.text} 
+                    key={todo.id}
+                    todo={todo}
+                />)
+            }
+            
         </ul>
     )
 }

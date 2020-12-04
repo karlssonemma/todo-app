@@ -1,7 +1,8 @@
 .App {
-  width: 50%;
+  width: 100%;
   height: 100vh;
-  margin: 8vh auto;
+  margin: 5% auto;
+  padding: 2em;
 
   display: flex;
   flex-direction: column;
@@ -10,4 +11,12 @@
 
   background-color: #AFCABC;
   border-radius: 25px;
+
+  font-family: 'Prompt', sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  .App {
+    width: 80%;
+  }
 }

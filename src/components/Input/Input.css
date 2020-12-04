@@ -1,3 +1,66 @@
-.input-section {
+.input__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.input__section {
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+.input__section label {
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+
+.input {
+    /* max-width: 300px; */
+    width: 100%;
+
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.submit__btn {
+    width: max-content;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    background-color: #29473F;
+    color: #AFCABC;
+    cursor: pointer;
+}
+
+/* .submit__btn:hover {
+    background-color: #AFCABC;
+    color: #29473F;
+    border: 1px solid #29473F;
+} */
+
+.input,
+.submit__btn {
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Prompt', sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+    .input__container {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .input__section {
+        margin-bottom: 0;
+    }
 }
